@@ -8,7 +8,7 @@ module.exports = {
       options: {
         backend: {
           name: "git-gateway",
-          branch: "master",
+          branch: "main",
         },
         media_folder: "static/img",
         public_folder: "/img"
