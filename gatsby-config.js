@@ -14,6 +14,20 @@ module.exports = {
         public_folder: "/img"
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `songs`,
+        path: `${__dirname}/src/data/songs/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `verses`,
+        path: `${__dirname}/src/data/verses/`,
+      },
+    },
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
     {
