@@ -1,35 +1,23 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { container } from './layout.css'
-
-// styles
-const pageStyles = {
-    color: "#232129",
-    padding: 96,
-    fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-    marginTop: 0,
-    marginBottom: 64,
-    maxWidth: 320,
-}
-const headingAccentStyles = {
-    color: "#663399",
-}
+import { Helmet } from "react-helmet"
+import { container, content } from './layout.module.css'
+import '../styles/style.scss';
+import CustomNav from './navbar';
 
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ pageInfo, children }) => {
     return (
-        <main className="container">
-            <title>{pageTitle}</title>
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                </ul>
-            </nav>
-            <h1>{pageTitle}</h1>
-            {children}
+        <main className={container}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{pageInfo.pageTitle || "Sing Praise"}</title>
+            </Helmet>
+            <CustomNav pageInfo={pageInfo} />
+            {/* <h1>{pageInfo.pageTitle}</h1> */}
+            <div className={content} >
+                {children}
+            </div>
         </main>
     )
 }

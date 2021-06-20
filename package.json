@@ -14,6 +14,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "gatsby": "^3.6.2",
     "gatsby-plugin-manifest": "^3.7.1",
     "gatsby-plugin-netlify-cms": "^5.7.1",
