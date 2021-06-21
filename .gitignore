@@ -35,13 +35,7 @@ bin/published.js
 test/**/public
 .gatsby-context.js
 .DS_Store
-public/page-data/
-public/icons/
-public/static/
-public/*.js
-public/*.js.map
-public/*.webmanifest
-public/*.png
+public/
 node_modules/
 e2e-tests/gatsby-pnp/
 __diff_output__/
