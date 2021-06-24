@@ -42,7 +42,7 @@ content: |-
 
 
 
-  *2*
+  2
 
   > When through the woods
   >

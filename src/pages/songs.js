@@ -1,6 +1,7 @@
 // Step 1: Import your component
 import * as React from 'react'
 import Layout from "../component/layout";
+import SongListContainer from "../component/songListContainer";
 
 import Button from 'react-bootstrap/Button';
 
@@ -8,8 +9,7 @@ import Button from 'react-bootstrap/Button';
 const SongsPage = () => {
     return (
         <Layout pageInfo={{ pageTitle: "Songs", pageName: "songs" }} >
-            Hi there, I'm the proud creator of this site, which I built with Gatsby.
-            <Button variant="info" >Fake Button</Button>
+            <SongListContainer />
         </Layout>
     )
 }
