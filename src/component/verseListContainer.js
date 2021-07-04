@@ -1,20 +1,21 @@
+
 import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
-import SongList from "./songList";
+import VerseList from "./verseList";
 
-const SongListContainer = ({ category }) => {
+const VerseListContainer = ({ category }) => {
 
     const { allMarkdownRemark: { edges: data } } = useStaticQuery(graphql`
-        query songQuery {
+        query verseQuery {
             allMarkdownRemark(
-                filter: {fileAbsolutePath: {regex: "/songs/"}}
+                filter: {fileAbsolutePath: {regex: "/verses/"}}
             ) { 
                 edges {
                     node {
                         frontmatter {
                             tags
                             title
-                            songno
+                            content
                         }
                         id
                     }
@@ -27,9 +28,9 @@ const SongListContainer = ({ category }) => {
     if (!data || !data.length) return null;
 
     return (
-        <SongList data={data} />
+        <VerseList data={data} />
     );
 
 }
 
-export default SongListContainer;
+export default VerseListContainer;

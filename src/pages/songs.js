@@ -3,7 +3,6 @@ import * as React from 'react'
 import Layout from "../component/layout";
 import SongListContainer from "../component/songListContainer";
 
-import Button from 'react-bootstrap/Button';
 
 // Step 2: Define your component
 const SongsPage = () => {
